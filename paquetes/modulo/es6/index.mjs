@@ -1,3 +1,3 @@
-import modulo from "./modulo";
+import saludar from "./modulo.js";
 
-modulo();
+saludar();
