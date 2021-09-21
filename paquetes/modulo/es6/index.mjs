@@ -1,3 +1,4 @@
 import saludar  from "./modulo.mjs";
 
-saludar();
+console.log(saludar.prop1);
+saludar.saludar();

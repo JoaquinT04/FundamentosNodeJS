@@ -2,4 +2,7 @@ function saludar() {
 	console.log('Hola Mundo!!');
 }
 
-export default saludar ;
+export default {
+	saludar,
+	prop1: 'Soy un modulo uwu',
+};
