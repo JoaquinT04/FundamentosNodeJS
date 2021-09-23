@@ -1,12 +1,15 @@
 const http = require('http');
 
+http.createServer(router).listen(3000);
+
 function router (request, response) {
 	console.log('Nueva petición!');
 	console.log(request.url);
 
 	switch(request.url){
 		case '/hola':
-			response.write('Hola que tal?');
+			let saludo = hola();
+			response.write(saludo);
 			response.end();
 			break;
 		default: 
@@ -17,10 +20,20 @@ function router (request, response) {
 /* 	response.writeHead(201, { 'Content-Type': 'text/html'});
 	// Escribir respuesta al usuario
 	response.write('Hola ya se usar http de NodeJS')
-
+	
 	response.end(); */
-}
 
-http.createServer(router).listen(3000);
+	function hola() {
+		return 'Hola que tal?';
+	}
+
+	/*
+	para hacer el debugger 
+	node --inspect archivo
+	ir a chrome y escribir el localhost
+	ir a Chrome y escribir en el buscador
+	chrome://inspect 
+	*/
+}
 
 console.log('Escuchando http en el puerto 3000');
