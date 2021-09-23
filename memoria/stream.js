@@ -40,5 +40,3 @@ let mayus = new Mayus();
 readableStream
 	.pipe(mayus)
 	.pipe(process.stdout);
-
-
